@@ -21,3 +21,5 @@ class SmartBearTest(TestCase):
         sleep(2)
         # Close the browser
         self.driver.quit()
+
+        """Check"""
