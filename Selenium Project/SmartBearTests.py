@@ -412,12 +412,7 @@ class SmartBearTest(TestCase):
         # Verify that the account name changes back to "Log in" after logging out
         self.assertEqual(self.toolbar.toolbar_account_name().text.lower(), "Log in".lower())
 
-    # def test_clean_cart(self):
-    #     self.add_random_product_to_cart(2)
-    #     self.clean_cart()
-
-
-
+    #Helper Functions for Tests 1 - 9
     def extract_price(self, element: WebElement):
         """
             Extracts the numeric price from a given element.
@@ -465,6 +460,7 @@ class SmartBearTest(TestCase):
                 self.product_page.choose_color()
 
             self.product_page.change_quantity(quantity)
+            self.product_page.get_product_name().click()
             self.product_page.add_to_cart()
 
             if mouse_click:
