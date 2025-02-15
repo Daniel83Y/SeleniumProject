@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4766004b-9314-46ec-b287-271340df4598" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_Category_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_main_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_toolbar.py" afterDir="false" />
+    <list default="true" id="4766004b-9314-46ec-b287-271340df4598" name="Changes" comment="Second Commit">
+      <change afterPath="$PROJECT_DIR$/Selenium Project/SmartBear_CartPopUp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium Project/SmartBear_Cart_Page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium Project/SmartBear_Checkout_Page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_Login_Page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Selenium Project/SmartBearTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/SmartBearTests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium Project/Smartbear Tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/SmartBear_Product_Page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium Project/Smartbear_mainpage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/SmartBear_Product_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/SmartBear_Product_Page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/Smartbear_toolbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_toolbar.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +34,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Daniel83Y"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Daniel83Y&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Daniel83Y/SeleniumProject.git",
-    "accountId": "99a9baa5-bd46-4855-999e-f61006141644"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Daniel83Y/SeleniumProject.git&quot;,
+    &quot;accountId&quot;: &quot;99a9baa5-bd46-4855-999e-f61006141644&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -56,7 +57,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_3_products_details.executor": "Run",
     "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_4.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_and_remove.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_cart_transitions.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_change_products_in_cart.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_clean_cart.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_complete_order.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_login_logout.executor": "Run",
     "Python tests.Python tests for SmartBearTests.SmartBearTest.test_page_transitions.executor": "Run",
     "Python tests.Python tests in SmartBearTests.py.executor": "Run",
     "Python.SmartBear_Product_Page.executor": "Run",
@@ -64,6 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/BlackPhanter",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -74,7 +86,22 @@
       <recent name="C:\Users\BlackPhanter\PycharmProjects\PythonProject6\Selenium Project\Smartbear Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart">
+  <component name="RunManager" selected="Python tests.Python tests for SmartBearTests.SmartBearTest">
+    <configuration name="Python tests for SmartBearTests.SmartBearTest" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject6" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Selenium Project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for SmartBearTests.SmartBearTest.test_add_to_cart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PythonProject6" />
       <option name="ENV_FILES" value="" />
@@ -90,7 +117,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_page_transitions" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PythonProject6" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,14 +128,47 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_page_transitions&quot;" />
+      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_add_to_cart_3&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_and_remove" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject6" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Selenium Project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_add_to_cart_and_remove&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_clean_cart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject6" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Selenium Project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_clean_cart&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest" />
+        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_clean_cart" />
         <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart" />
-        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_page_transitions" />
+        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3" />
+        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_and_remove" />
       </list>
     </recent_temporary>
   </component>
@@ -152,11 +212,20 @@
       <option name="project" value="LOCAL" />
       <updated>1739173027010</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Second Commit">
+      <option name="closed" value="true" />
+      <created>1739206622170</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739206622170</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Second Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second Commit" />
   </component>
 </project>
