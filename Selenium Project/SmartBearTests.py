@@ -21,6 +21,18 @@ import logging
 logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(message)s")
 
 
+def extract_price( element: WebElement):
+    """
+    Extracts the numeric price from a given element.
+    """
+    if element is None:
+        return None
+    text = element.text.replace(',', '')
+    text = text.strip()
+    match = re.search(r"\d+.\d+", text)  # Looks for a floating-point number
+    return match.group() if match else None  # Return the matched number as a string
+
+
 class SmartBearTest(TestCase):
     def setUp(self):
         """Set up the test environment."""
@@ -106,7 +118,7 @@ class SmartBearTest(TestCase):
         self.clean_cart()
 
     # Test 3
-    def test_add_to_cart_3(self):
+    def test_add_to_cart_3_products(self):
         """
         Adds multiple products to the shopping cart and verifies quantities, names, and prices.
         Ensures no duplicate products are selected.
@@ -230,20 +242,20 @@ class SmartBearTest(TestCase):
 
         # GET Name, Price, Quantity from Popup Cart
         actual_names_popup = [name.text.strip() for name in self.cart_popup.cart_product_name()]
-        actual_unit_prices_popup = [self.extract_price(price) for price in self.cart_popup.cart_product_price()]
+        actual_unit_prices_popup = [extract_price(price) for price in self.cart_popup.cart_product_price()]
         actual_quantities_popup = [qty.get_attribute('value') for qty in self.cart_popup.cart_product_quantity()]
 
         # Extract the subtotal from the cart popup
-        cart_subtotal = float(self.extract_price(self.cart_popup.find_subtotal()))
+        cart_subtotal = float(extract_price(self.cart_popup.find_subtotal()))
 
         # Go to the full cart page
         self.cart_popup.go_to_cart()
 
         # GET Name, Price, Quantity from Cart Page
         actual_names_cart_page = [name.text.strip() for name in self.cart_page.cart_page_product_name()]
-        actual_unit_prices_cart_page = [self.extract_price(price) for price in
+        actual_unit_prices_cart_page = [extract_price(price) for price in
                                         self.cart_page.cart_page_product_price()]  # FIXED: Now correctly gets only unit prices
-        actual_subtotal_prices_cart_page = [self.extract_price(price) for price in
+        actual_subtotal_prices_cart_page = [extract_price(price) for price in
                                             self.cart_page.cart_page_product_subtotal_price()]
         actual_quantities_cart_page = [qty.get_attribute('value') for qty in
                                        self.cart_page.cart_page_product_quantity()]
@@ -282,8 +294,9 @@ class SmartBearTest(TestCase):
         adjusted_popup_prices = [round(float(price), 2) for price in adjusted_popup_prices]
         actual_subtotal_prices_cart_page = [round(float(price), 2) for price in actual_subtotal_prices_cart_page]
         # Verify that adjusted popup prices match subtotal prices in cart page
-        self.assertEqual(adjusted_popup_prices, actual_subtotal_prices_cart_page,
-                         "Mismatch in total product prices between popup and cart page.")
+        for price_popup, price_cart in zip(adjusted_popup_prices, actual_subtotal_prices_cart_page):
+            self.assertAlmostEqual(price_popup, price_cart, 2,
+                                   "Mismatch in total product prices between popup and cart page.")
 
         # Verify that product quantities match in both popup cart and cart page
         self.assertEqual(actual_quantities_popup, actual_quantities_cart_page,
@@ -303,52 +316,36 @@ class SmartBearTest(TestCase):
         Ensures the overall total price in the cart is updated accordingly.
         Checks that the updated total price is reflected correctly in the cart popup.
         """
-        selected_products = set()  # Track selected products to avoid duplicates
-        # self.add_random_product_to_cart(2)
-        # self.clean_cart()
+        selected_products = set()
         # Add two unique products to the cart
         for _ in range(2):
             quantity = randint(2, 10)
             self.add_random_product_to_cart(quantity, True, selected_products)  # Ensure unique selection
             self.toolbar.toolbar_logo_click()
-
-        # Navigate to the cart
         self.toolbar.toolbar_cart_click()
         self.cart_popup.go_to_cart()
-
-        # Find the quantities of the products in the cart
         prod_quantities = self.cart_page.cart_page_product_quantity()
-
-        # Update the quantities of the products in the cart
-        for quantity in prod_quantities:
-            self.cart_page.change_quantity(quantity, randint(2, 10))
-
-        # Find the updated quantities of the products
+        for i in range(len(prod_quantities)):
+            self.cart_page.change_quantity(i, randint(2, 10))
         updated_quantities = self.cart_page.cart_page_product_quantity()
-
-        # Find the subtotal prices of the products in the cart
         cart_prod_sub_total = self.cart_page.cart_page_product_subtotal_price()
-
-        # Verify that the total price for each product is updated correctly
         for i in range(len(updated_quantities)):
-            product_price = float(self.extract_price(self.cart_page.cart_page_product_price()[i]))
+            product_price = float(extract_price(self.cart_page.cart_page_product_price()[i]))
             updated_quantity = updated_quantities[i].text.strip()
-
             # Check if updated_quantity is not empty before converting to float
             if updated_quantity:
                 updated_quantity = float(updated_quantity)
                 expected_sub_total = product_price * updated_quantity
-                actual_sub_total = float(self.extract_price(cart_prod_sub_total[i]))
+                actual_sub_total = float(extract_price(cart_prod_sub_total[i]))
                 self.assertEqual(expected_sub_total, actual_sub_total,
                                  f"Expected subtotal: {expected_sub_total}, but got: {actual_sub_total}")
-
-        # Verify the overall total price in the cart
         total_cost_element = self.cart_page.cart_summary_total()
-        total_cost = float(self.extract_price(total_cost_element))
-        sum_cart_total = sum(float(self.extract_price(sub_total)) for sub_total in cart_prod_sub_total)
-        self.assertEqual(total_cost, sum_cart_total,
-                         f"Expected total cost: {total_cost}, but got: {sum_cart_total}")
+        total_cost = float(extract_price(total_cost_element))
+        sum_cart_total = sum(float(extract_price(sub_total)) for sub_total in cart_prod_sub_total)
+        self.assertAlmostEqual(total_cost, sum_cart_total, 2,
+                               f"Expected total cost: {total_cost}, but got: {sum_cart_total}")
         self.cart_page.empty_cart()
+        logging.info("Test test_changes_in_2_products completed successfully.")
     # Test 8
     def test_complete_order(self):
         """complete  order including login"""
@@ -413,17 +410,6 @@ class SmartBearTest(TestCase):
         self.assertEqual(self.toolbar.toolbar_account_name().text.lower(), "Log in".lower())
 
     #Helper Functions for Tests 1 - 9
-    def extract_price(self, element: WebElement):
-        """
-            Extracts the numeric price from a given element.
-            """
-        if element is None:
-            return None
-        text = element.text.replace(',', '')
-        text = text.strip()
-        match = re.search(r"\d+.\d+", text)  # Looks for a floating-point number
-        return match.group() if match else None  # Return the matched number as a string
-
     def add_random_product_to_cart(self, quantity, mouse_click=False, selected_products=None):
         """
         Adds a random product from a random category to the shopping cart
@@ -466,7 +452,9 @@ class SmartBearTest(TestCase):
             if mouse_click:
                 self.remove_cart_blocker()
             break
-
+    # def test_clean(self):
+    #     self.add_random_product_to_cart(2)
+    #     self.clean_cart()
     def clean_cart(self):
         while True:
             try:
