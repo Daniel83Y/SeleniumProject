@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4766004b-9314-46ec-b287-271340df4598" name="Changes" comment="9/9 Test Completed and tested">
+    <list default="true" id="4766004b-9314-46ec-b287-271340df4598" name="Changes" comment="9/9 Test Completed and tested&#10;Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Selenium Project/SmartBearTests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/SmartBearTests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/SmartBear_Cart_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/SmartBear_Cart_Page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/SmartBear_Checkout_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/SmartBear_Checkout_Page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/SmartBear_Product_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/SmartBear_Product_Page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/Smartbear_Category_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_Category_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/Smartbear_Login_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_Login_Page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/Smartbear_main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selenium Project/Smartbear_toolbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selenium Project/Smartbear_toolbar.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,38 +56,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_3_products_details.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_4.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_and_remove.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_cart_transitions.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_change_products_in_cart.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_clean_cart.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_complete_order.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_login_logout.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for SmartBearTests.SmartBearTest.test_page_transitions.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in SmartBearTests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.SmartBear_Product_Page.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Smartbear_Product_page.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/BlackPhanter&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_3_products_details.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3_products.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_4.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_and_remove.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_cart_transitions.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_change_products_in_cart.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_clean.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_clean_cart.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_complete_order.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_login_logout.executor": "Run",
+    "Python tests.Python tests for SmartBearTests.SmartBearTest.test_page_transitions.executor": "Run",
+    "Python tests.Python tests in SmartBearTests.py.executor": "Run",
+    "Python.SmartBear_Product_Page.executor": "Run",
+    "Python.Smartbear_Product_page.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/BlackPhanter",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\BlackPhanter\PycharmProjects\PythonProject6\Selenium Project" />
       <recent name="C:\Users\BlackPhanter\PycharmProjects\PythonProject6\Selenium Project\Smartbear Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3">
+  <component name="RunManager" selected="Python tests.Python tests for SmartBearTests.SmartBearTest">
     <configuration name="Python tests for SmartBearTests.SmartBearTest" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PythonProject6" />
       <option name="ENV_FILES" value="" />
@@ -111,7 +120,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_add_to_cart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3_products" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PythonProject6" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -122,11 +131,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_add_to_cart&quot;" />
+      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_add_to_cart_3_products&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_change_products_in_cart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PythonProject6" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,11 +146,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_add_to_cart_3&quot;" />
+      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_change_products_in_cart&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_clean_cart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for SmartBearTests.SmartBearTest.test_clean" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PythonProject6" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,17 +161,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_clean_cart&quot;" />
+      <option name="_new_target" value="&quot;SmartBearTests.SmartBearTest.test_clean&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3" />
-        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_3_products_details" />
         <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest" />
-        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_clean_cart" />
-        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart" />
+        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_3_products_details" />
+        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_clean" />
+        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_add_to_cart_3_products" />
+        <item itemvalue="Python tests.Python tests for SmartBearTests.SmartBearTest.test_change_products_in_cart" />
       </list>
     </recent_temporary>
   </component>
@@ -222,13 +231,22 @@
       <option name="project" value="LOCAL" />
       <updated>1739632910958</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="9/9 Test Completed and tested&#10;Update">
+      <option name="closed" value="true" />
+      <created>1739639543999</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739639543999</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="Second Commit" />
     <MESSAGE value="9/9 Test Completed and tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="9/9 Test Completed and tested" />
+    <MESSAGE value="9/9 Test Completed and tested&#10;Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="9/9 Test Completed and tested&#10;Update" />
   </component>
 </project>
